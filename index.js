@@ -8,15 +8,15 @@ dotenv.config();
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 /* ================== GOOGLE AUTH ================== */
-// const auth = new google.auth.GoogleAuth({
-//   keyFile: "credentials.json",
-//   scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
-// });
-
 const auth = new google.auth.GoogleAuth({
-  credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS),
+  keyFile: "credentials.json",
   scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
 });
+
+// const auth = new google.auth.GoogleAuth({
+//   credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS),
+//   scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+// });
 
 const sheets = google.sheets({
   version: "v4",
