@@ -121,7 +121,7 @@ async function checkDeadlinesAndAlert() {
 
 /* ================== AUTO ALERT INTERVAL ================== */
 // Runs every 30 minutes
-setInterval(checkDeadlinesAndAlert, 1 * 60 * 1000);
+setInterval(checkDeadlinesAndAlert, 30 * 60 * 1000);
 
 /* ================== START LOG ================== */
 console.log("🤖 Telegram bot is running with auto alerts...");
